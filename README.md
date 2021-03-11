@@ -63,7 +63,7 @@ You can find launchpad\_py at https://github.com/FMMT666/launchpad.py
 Note that currently (2021-03-11) the version has a bug preventing the top row
 of leds to be correctly used, they will become yellow and stay on.
 
-A fixed version can be found here: https://github.com/mutax/launchpad.py/tree/fix\_automap\_leds until
+A fixed version can be found here: https://github.com/mutax/launchpad.py/tree/fix_automap_leds until
 the pull request with the fix is merged.
 
 
