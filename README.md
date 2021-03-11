@@ -58,7 +58,7 @@ as this utility was planned as a proof of concept only.
 
 Also pygame and the lauchpad\_py.
 
-You can find launchpad\_py athttps://github.com/FMMT666/launchpad.py
+You can find launchpad\_py at https://github.com/FMMT666/launchpad.py
 
 Note that currently (2021-03-11) the version has a bug preventing the top row
 of leds to be correctly used, they will become yellow and stay on.
