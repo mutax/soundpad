@@ -3,14 +3,11 @@
     soundpad (c) 2021 Florian Streibelt <pypi@streibelt.net>
 
     This software is published under MIT License.
-    ee LICENCE for details.
+    see LICENCE for details.
 
     See README in the toplevel directory for more information.
 
-    By changing the executable to be executed in your terminal
-    emulator, this tool allows you to select between attached
-    and detached screen sessions or start a new one, eacht time
-    you open a new terminal window.
+    This tool enables a novation launchpad mini to be used as soundpad.
 
 """
 
@@ -21,17 +18,22 @@ import sys
 import pygame
 from pygame import time
 
+
+def launchpadpy():
+        print("Currently (2021-03-11) launchpad_py has a bug preventing the top row")
+        print("of LEDs to be correctly used, they will become yellow and stay on.")
+        print("A fixed version can be found here: https://github.com/mutax/launchpad.py")
+        print("A pull request was created at the original location.")
+
+
 try:
     import launchpad_py as launchpad
 except ImportError:
     try:
         import launchpad
     except ImportError:
-        print("you need to install launchpad_py from https://github.com/FMMT666/launchpad.py")
-        print("note that currently (2021-03-11) the version has a bug preventing the top row")
-        print("of leds to be correctly used, they will become yellow and stay on.")
-        print("a fixed version can be found here: https://github.com/mutax/launchpad.py")
-        print("A pull request was created at the oritinal location.")
+        print("You need to install launchpad_py from https://github.com/FMMT666/launchpad.py")
+        launchpadpy()
         sys.exit("error loading launchpad-py")
 
 
@@ -221,6 +223,9 @@ class Soundboard:
         print("example: activate solo playmode, hold H9 and start plaing a loop")
         print("         if you now start another sound, the loop will stop")
         print("         useful for a gameshow effect.")
+        print()
+        print("If the toprow of LED is constantly yellow, please note:")
+        launchpadpy()
         print()
 
         # light button B9 - a press stopps all sounds
